@@ -1,0 +1,62 @@
+def Sumar():
+    resultado=0
+    sumando=int(input("Introduce un valor: "))
+    while sumando!=0:
+        resultado=resultado+sumando
+        sumando=int(input("Mas: "))
+    print("El resultado de la suma es=", resultado)
+
+def Restar():
+    minuendo=int(input("Introduce un valor: "))
+    num=int(input("Menos: "))
+    while num!=0: 
+        
+        minuendo=minuendo-num
+        
+        num=int(input("Introduce otro valor: "))
+        
+    print("El resultado de la resta es=", minuendo)
+
+def Multiplicar():
+    multiplicando=int(input("Introduce el multiplicando: "))
+    multiplicador=int(input("Introduce el multiplicador:"))
+    print("El resultado de la multiplicación es =",multiplicando*multiplicador)
+    
+def Division():
+    dividendo=int(input("Introduce el dividendo: "))
+    divisor=int(input("Introduce el divisor:"))
+    while divisor==0:
+        print("No se puede dividir entre 0")
+        divisor=int(input("Por favor, introduce un valor correcto"))
+    print("El resultado de la división es =",dividendo/divisor)
+
+def Calculadora():
+    fin=0
+    while not(fin):
+        opc=int(input("Introduce la opción deseada: ")) 
+        if (opc ==1):
+            Sumar()
+        elif (opc==2):
+            Restar()
+        elif (opc==3):
+            Multiplicar()
+        elif (opc==4):
+            Division()
+        elif (opc==5):
+            print("Hasta la vista!")
+            fin=1
+
+
+print("""***********
+Calculadora
+***********
+
+Menu:
+
+1) Suma
+2) Resta
+3) Muliplicación
+4) División
+5) Salir""")
+
+Calculadora()
